@@ -240,7 +240,6 @@
 			regulator-n-voltages = <62>;
 			regulator-enable-ramp-delay = <2000>;
 			enable-gpio = <&max77620 6 0>;
-			voltage-time-sel = <80>;
 			regulator-settling-time-us = <160>;
                 };
 
