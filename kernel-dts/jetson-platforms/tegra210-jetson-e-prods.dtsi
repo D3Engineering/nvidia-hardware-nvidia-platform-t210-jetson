@@ -21,7 +21,6 @@
 		sor1 {
 			prod-settings {
 				#prod-cells = <3>;
-				mask-one-style;
 				prod_c_75M {
 				    prod = <
 					0x000003a0 0x00000002 0x00000002	// SOR_NV_PDISP_INPUT_CONTROL  	01:01=ARM_VIDEO_RANGE	0x1
