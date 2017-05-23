@@ -80,6 +80,9 @@
 		nvidia,sd-device;
 		cd-inverted;
 		wp-inverted;
+		nvidia,cd-wakeup-capable;
+		nvidia,pmc-wakeup = <&tegra_pmc
+			PMC_WAKE_TYPE_EVENT 35 (PMC_TRIGGER_TYPE_RISING | PMC_TRIGGER_TYPE_FALLING)>;
 		status = "okay";
 	};
 
