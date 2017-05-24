@@ -36,7 +36,7 @@
 		interrupts = <TEGRA_GPIO(H, 5) 0x01>;
 	};
 
-	bcmdhd_wlan { /* WLAN BCM43340 in P2530 Compute Module */
+	bcmdhd_wlan: bcmdhd_wlan { /* WLAN BCM43340 in P2530 Compute Module */
 		compatible = "android,bcmdhd_wlan";
 		interrupt-parent = <&gpio>;
 		interrupts = <TEGRA_GPIO(H, 2) 0x14>;

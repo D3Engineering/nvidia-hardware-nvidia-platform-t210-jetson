@@ -129,5 +129,15 @@
 				};
 			};
 		};
+
+		fragement@4 {
+			odm-data = "l4t";
+			override@0 {
+				target = <&bcmdhd_wlan>;
+				_overlay_ {
+					delete-target-property = "nvidia,pmc-wakeup";
+				};
+			};
+		};
 	};
 };
