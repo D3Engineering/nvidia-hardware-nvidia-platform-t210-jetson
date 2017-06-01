@@ -1011,4 +1011,8 @@
 		nvidia,ci = <0>;
 		nvidia,cg = <2>;
 	};
+
+	watchdog@60005100 {
+		status = "okay";
+	};
 };
