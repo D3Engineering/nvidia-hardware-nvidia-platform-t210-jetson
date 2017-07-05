@@ -153,5 +153,18 @@
 				};
 			};
 		};
+
+		fragement@5 {
+			odm-data = "enable-high-speed-uart";
+			override@0 {
+				target = <&uarta>;
+				_overlay_ {
+					compatible = "nvidia,tegra114-hsuart";
+					early-print-console-channel;
+					resets = <&tegra_car TEGRA210_CLK_UARTA>;
+					reset-names = "serial";
+				};
+			};
+		};
 	};
 };
