@@ -60,6 +60,9 @@
 	chosen {
 		board-has-eeprom;
 		stdout-path = &uarta;
+		verified-boot {
+			poweroff-on-red-state;
+		};
 	};
 
 	reserved-memory {
