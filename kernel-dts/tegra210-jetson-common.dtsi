@@ -25,6 +25,7 @@
 #include <dt-bindings/thermal/tegra124-soctherm.h>
 #include <dt-bindings/thermal/tegra210-trips.h>
 #include <tegra210-soc/tegra210-prods.dtsi>
+#include <t210-common-platforms/tegra210-platform-common-padvoltage-default.dtsi>
 #include <t210-common-platforms/tegra210-ers-touch-e1937-1000-a00.dtsi>
 #include <tegra210-soc/tegra210-modem-common.dtsi>
 #include <tegra210-soc/tegra210-trusty.dtsi>
@@ -33,10 +34,12 @@
 	nvidia,dtbbuildtime = __DATE__, __TIME__;
 
 	serial@70006000 {
-		compatible = "nvidia,tegra210-uart", "nvidia,tegra114-hsuart";
+		compatible = "nvidia,tegra210-uart", "nvidia,tegra114-hsuart", "nvidia,tegra20-uart";
 		console-port;
 		sqa-automation-port;
 		enable-rx-poll-timer;
+		/delete-property/ resets;
+		/delete-property/ reset-names;
 		status = "okay";
 	};
 
@@ -67,10 +70,8 @@
 		nvidia,sys-clock-req-active-high;
 		#nvidia,wake-cells = <3>;
 		nvidia,restrict-voltage-switch;
-		pinctrl-names = "default";
-		pinctrl-0 = <&pinctrl_iopad_default>;
 
-		pinctrl_iopad_default: iopad-defaults {
+		iopad-defaults {
 			pex-io-pads {
 				pins = "pex-bias", "pex-clk1", "pex-clk2";
 				low-power-enable;
@@ -238,7 +239,6 @@
 			regulator-n-voltages = <62>;
 			regulator-enable-ramp-delay = <2000>;
 			enable-gpio = <&max77620 6 0>;
-			voltage-time-sel = <80>;
 			regulator-settling-time-us = <160>;
                 };
 
