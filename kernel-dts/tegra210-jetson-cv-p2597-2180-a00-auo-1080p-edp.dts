@@ -15,7 +15,8 @@
 * 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 *
 */
-#include "tegra210-jetson-cv-base-p2597-2180-a00.dts"
+#include "tegra210-jetson-cv-p2597-2180-a00.dts"
+
 
 / {
 	host1x {
