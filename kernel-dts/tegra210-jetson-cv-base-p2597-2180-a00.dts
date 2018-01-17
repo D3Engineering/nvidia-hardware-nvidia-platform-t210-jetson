@@ -323,6 +323,7 @@
 					vsync-len = <6>;
 					nvidia,h-ref-to-sync = <1>;
 					nvidia,v-ref-to-sync = <1>;
+					flags = <0x3>;	/* hsync_polarity = -ve, vsync_polarity = -ve */
 					vmode = <0x400000>;	/* FB_VMODE_NONINTERLACED | FB_VMODE_IS_CEA */
 				};
 			};
