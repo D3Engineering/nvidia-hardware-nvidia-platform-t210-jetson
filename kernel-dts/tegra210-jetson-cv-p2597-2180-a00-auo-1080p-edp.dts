@@ -19,6 +19,8 @@
 
 
 / {
+	nvidia,dtsfilename = __FILE__;
+
 	host1x {
 		sor {
 			status = "okay";
